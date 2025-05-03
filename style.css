@@ -1,0 +1,132 @@
+
+body { 
+    box-sizing: border-box; /* el tamaño del elemento se calcula considerando el contenido */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  header {
+    background-color: brown;
+  }
+footer {
+  background-color: rgb(81, 78, 83);
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+
+.contenedor-flex img {
+  border-radius: 120px;
+  width: 150px;
+  height: 150px;
+
+}
+
+
+/* barra nav */
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor general del nav */
+nav {
+  background-color: #2b5876;
+  padding: 15px 30px;
+}
+
+/* Contenedor flex para los ítems */
+.contenedor-flex {
+  display: flex;
+  justify-content: center; /* o space-between / flex-end según necesidad */
+  align-items: center;
+  gap: 40px; /* Espacio entre enlaces */
+}
+
+/* Estilo individual de cada ítem */
+.contenedor-flex li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.contenedor-flex li a:hover {
+  color: #ffcc00; /* Color al pasar el mouse */
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Responsive opcional */
+@media (max-width: 768px) {
+  .contenedor-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Aca empieza la portada interactiva */
+.portada {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #2b5876, #4e4376);
+  color: white;
+}
+
+.portada h1 {
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imagen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.imagen:hover .overlay {
+  opacity: 1;
+}
