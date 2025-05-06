@@ -4,15 +4,28 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    padding: 0%; 
+    margin: 0; /* me elimino el borde en blanco */
   }
 
-  header {
-    background-color: brown;
-  }
-footer {
-  background-color: rgb(81, 78, 83);
+/* portada */
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
 }
 
+.slider-container img {
+  flex: 0 0 100%;
+  width: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+  
+/* barra nav */
 .contenedor-flex {
   display: flex;
   justify-content: flex-end;
@@ -27,8 +40,6 @@ footer {
 
 }
 
-
-/* barra nav */
 ul, li {
   list-style: none;
   margin: 0;
@@ -37,7 +48,8 @@ ul, li {
 
 /* Contenedor general del nav */
 nav {
-  background-color: #2b5876;
+  height: 21vh;
+  background-color: #454c50;
   padding: 15px 30px;
 }
 
@@ -103,4 +115,9 @@ nav {
   justify-content: center;
   align-items: center;
   /* el video esta centrado */
+}
+
+
+footer {
+  background-color: rgb(81, 78, 83);
 }
