@@ -10,23 +10,21 @@ body {
   }
 
 /* portada */
-.slider-container {
+.portada-flex {
   display: flex;
   width: 100%;
-  height: 80vh;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
+  height: 100hv;
+  justify-content: center;
+  align-items: center;
+  }
 
-.slider-container img {
-  flex: 0 0 100%;
+.portada-flex img {
   width: 100%;
+  height: 100hv;
   object-fit: cover;
-  scroll-snap-align: center;
 }
 
-  
-/* barra nav */
+  /* barra nav */
 .contenedor-flex {
   display: flex;
   justify-content: flex-end;
@@ -85,12 +83,13 @@ nav {
     gap: 15px;
   }
 }
-/* contenedor de imagenes */
+/* contenedor de imagenes  productos.html*/
 .grid-container {
   background-color: rgb(87, 109, 102);
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
+  position: relative;
    }
 
 .grid-container img { 
@@ -100,15 +99,31 @@ nav {
     opacity: 0.8;
     transition: opacity 0.3s ease-in-out;
 }
-.grid-container img:hover {
+/* .grid-container img:hover {
   border-radius: 150px;
   opacity: 1;
   transform: scale(1.2);
   z-index: 1;
-  position: relative;
   box-shadow: 0 0 10px rgba (0,0,0,0.5);
+} */
+.grid-container .contenedor-interno button {
+    position: relative; 
+    display: inline-block;
+    align-items: end;
+    top: -10%;
+    left: 20%;
+    transform: translate(-50%, -50%); 
+    background-color: #395e39;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+  
+
 }
-/* termina el contenedor de imagenes */
+/* termina el contenedor de PRODUCTOS */
 
 .video {
   padding-top: 20px;
@@ -148,3 +163,21 @@ nav {
   }
 
 
+/* CONTACTO */
+
+/* EDITAR EL STILO */
+
+.contenedor-mapa{
+  padding-top: 20px;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.contenedor-mapa iframe{
+  left:0; 
+  top:0;
+  height:50%;
+  width:50%;
+}
