@@ -24,6 +24,24 @@ body {
   object-fit: cover;
 }
 
+.portada-flex .texto-de-portada {
+  position: absolute;
+  top: auto;
+  left: auto;
+  text-shadow: 0 0 10px;
+  color: rgb(187, 169, 204);
+  font-size: x-large;
+}
+
+.portada-flex .texto-de-portada-2 {
+  position: absolute;
+  top: 20PX;
+  left: auto;
+  text-shadow: 0 0 10px;
+  color: rgb(187, 169, 204);
+  font-size: x-large;
+
+
   /* barra nav */
 .contenedor-flex {
   display: flex;
@@ -82,7 +100,30 @@ nav {
     flex-direction: column;
     gap: 15px;
   }
+  }
+/* OFERTAS DEL INDEX */
+.contenedor-ofertas {
+  display: flex;
+  align-items: center;
 }
+
+
+.contenedor-ofertas .boton-oferta  button{
+    align-items: center;
+    left: 1%;
+    transform: translate(-50%, -50%); 
+    background-color: #395e39;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 300px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+/* PRODUCTOS */
 /* contenedor de imagenes  productos.html*/
 .grid-container {
   background-color: rgb(87, 109, 102);
@@ -90,7 +131,7 @@ nav {
   grid-template-columns: repeat(4,1fr);
   gap: 10px;
   position: relative;
-   }
+  }
 
 .grid-container img { 
     width: 100%;
@@ -164,20 +205,48 @@ nav {
 
 
 /* CONTACTO */
+.contenedor-formulario {
+  background-color: #c4e9c4;
+  display:grid;
 
-/* EDITAR EL STILO */
+  
 
-.contenedor-mapa{
+}
+
+.contenedor-formulario label,input {
+  font-size: x-large;
+  grid-template-rows: max-content;
+  display: grid;
+  grid-template-columns: repeat(5);
+  padding-top: 10px;
+  
+}
+
+.contenedor-formulario button {
+    margin-left: 50px;
+    margin-top: 30px;
+    transform: translate(-50%, -50%); 
+    background-color: #3b633b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: xx-large;
+  } 
+
+
+/* .contenedor-mapa{
   padding-top: 20px;
   overflow:hidden;
   padding-bottom:56.25%;
   position:relative;
   height:0;
-}
+} */
 
 .contenedor-mapa iframe{
   left:0; 
   top:0;
-  height:50%;
-  width:50%;
-}
+  height:100%;
+  width:100%;
+} 
