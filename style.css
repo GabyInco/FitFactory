@@ -26,21 +26,19 @@ body {
 
 .portada-flex .texto-de-portada {
   position: absolute;
-  top: auto;
-  left: auto;
   text-shadow: 0 0 10px;
   color: rgb(187, 169, 204);
-  font-size: x-large;
+  font-size: 70px;
 }
 
-.portada-flex .texto-de-portada-2 {
+.portada-flex .texto-de-portada-1 {
   position: absolute;
-  top: 20PX;
-  left: auto;
+  margin-top: 250px;
+  padding-left: 300px;
   text-shadow: 0 0 10px;
-  color: rgb(187, 169, 204);
-  font-size: x-large;
-
+  color: rgb(214, 200, 233);
+  font-size: 30px;
+}
 
   /* barra nav */
 .contenedor-flex {
@@ -50,12 +48,23 @@ body {
   gap: 50px;
 }
 
-.contenedor-flex img {
-  border-radius: 120px;
-  width: 150px;
-  height: 150px;
-
+.contenedor-flex .logo-nav {
+  position: absolute;
+  text-shadow: 0 0 10px;
+  color: rgb(187, 169, 204);
+  font-size: 50px;
+  margin-left: 1000px;
+  padding: 10px;
 }
+.contenedor-flex img {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 5%;
+  height: auto;
+  z-index: 1;
+  border-radius: 200px;
+  }
 
 ul, li {
   list-style: none;
@@ -65,8 +74,8 @@ ul, li {
 
 /* Contenedor general del nav */
 nav {
-  height: 21vh;
-  background-color: #454c50;
+  height: 7vh;
+  background-color: #010e16;
   padding: 15px 30px;
 }
 
@@ -76,6 +85,7 @@ nav {
   justify-content: center; /* o space-between / flex-end según necesidad */
   align-items: center;
   gap: 40px; /* Espacio entre enlaces */
+  margin-top: 25px;
 }
 
 /* Estilo individual de cada ítem */
@@ -101,6 +111,8 @@ nav {
     gap: 15px;
   }
   }
+
+
 /* OFERTAS DEL INDEX */
 .contenedor-ofertas {
   display: flex;
@@ -122,6 +134,25 @@ nav {
     z-index: 1;
 }
 
+/* oferta texto con flechas */
+.flechas-index {
+  color: rgb(172, 79, 152);
+  font-size: 35px;
+  animation: intermitente 1s infinite;
+  padding-left: 50px;
+}
+
+@keyframes intermitente {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* PRODUCTOS */
 /* contenedor de imagenes  productos.html*/
@@ -165,14 +196,15 @@ nav {
 
 }
 /* termina el contenedor de PRODUCTOS */
-
+/* 
 .video {
   padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* el video esta centrado */
 }
+  /* el video esta centrado */
+ 
 
 
 
@@ -196,43 +228,51 @@ nav {
 
 /* footer */
 .contenedor-flex-2 {
-  background-color: rgb(66, 54, 54);
+  background-color: rgb(57, 57, 102);
   display: flex;
   justify-content: center;
   padding-top: 20px;
-
   }
 
 
 /* CONTACTO */
 .contenedor-formulario {
-  background-color: #c4e9c4;
-  display:grid;
-
+  background-color:rgb(90, 90, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
   
+}
 
+.contenedor-formulario h1 {
+  font-size: 25px;
+  color: #20044d;
+  padding: 100px;
 }
 
 .contenedor-formulario label,input {
-  font-size: x-large;
-  grid-template-rows: max-content;
-  display: grid;
-  grid-template-columns: repeat(5);
+  font-size: 25px;
   padding-top: 10px;
-  
+  }
+
+.contenedor-formulario input, textarea {
+  border-color: #20044d;
+  border-radius: 200px;
 }
 
+
 .contenedor-formulario button {
-    margin-left: 50px;
-    margin-top: 30px;
+    margin-left: 60px;
+    margin-top: 50px;
     transform: translate(-50%, -50%); 
     background-color: #3b633b;
-    color: white;
+    color:white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: xx-large;
+    font-size: 20px;
   } 
 
 
@@ -249,4 +289,22 @@ nav {
   top:0;
   height:100%;
   width:100%;
-} 
+}
+
+.ubicacion {
+  color: #532799;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* SERVICIOS */
+.contenedor-videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.parrafo-servicios {
+  background-color: #91a191;
+  font-size: x-large;
+  text-shadow: 2px 2px 4px;
+}
